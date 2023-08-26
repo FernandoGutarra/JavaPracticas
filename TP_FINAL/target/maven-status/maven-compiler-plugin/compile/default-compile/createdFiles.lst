@@ -1,0 +1,14 @@
+modelo\Ronda.class
+servicios\ArchivoConfiguracion.class
+exceptions\NoEsNumeroEnteroException.class
+org\grupo14\App.class
+modelo\Equipo.class
+modelo\Fase.class
+modelo\Pronostico.class
+org\argentinaprograma\TP_Integrador_Grupo14\Main.class
+exceptions\NumeroIncorrectoDeCamposException.class
+modelo\ResultadoEnum.class
+servicios\LectorArchivos.class
+servicios\ArchivoResultados.class
+modelo\Participante.class
+modelo\Partido.class

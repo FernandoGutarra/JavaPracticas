@@ -1,0 +1,40 @@
+1. Dados los siguientes códigos, analizar y detectar los errores.
+Justificar en cada caso.
+a.
+public class Practica_1_Bonus_1{
+        public static void main(String[] args) {
+            double altura=’a’;    // estas declarando un double en un char eso esta mal aparte es usando back ticks
+            boolean existe;
+            existe = 34; // estas asignado un valor entero a una varible declarada como boolean eso esta mal
+            peso = 75.5; // no declaraste de que tipo era el peso que tendria que ser en este caso double por que declaraste un numero decimal
+            System.out.println("El valor de " - "peso es: "); //esta concatenando mal con el -
+            System.out.println(peso); // esto no estaria mal pero como no le declaraste de que tipo iba hacer peso te va a dar error
+        }
+}
+b.
+public class Practica_1_Bonus_2{
+        public static void main(String[] args) {
+            final char letra=’a’; //esta usando back ticks
+            int numero1, numero2; //esto esta bien
+            letra = ’f’; // nose declaro el tipo de varible
+            numero1=10+numero2; //esto se puede hacer
+            System.out.println("El valor de numero1 es:" + numero1); //esto se puede hacer
+            System.out.println("El valor de numero2 es:" + numero2); // esto se puede hacer
+        }
+}
+c.
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+public class Practica_1_Bonus_3 {
+        public static void main(String[] args){
+            int entero;
+            BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+            try {
+               System.out.println ("Ingrese un entero: "); // falto asignar el valor de entrada a entero entre la linea 33 y la 34 seria algo asi entero = Integer.valueOf(entrada.readLine());
+               System.out.println ("Nro ingresado: " + entero);
+             }
+         catch (Exception exc ) {
+             System.out.println(exc);
+        }
+}
+}

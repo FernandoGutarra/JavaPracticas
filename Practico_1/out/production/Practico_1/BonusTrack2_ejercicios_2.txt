@@ -1,0 +1,38 @@
+2.
+ Dados los siguientes enunciados y códigos, analizar y detectar los errores.
+ Justificar en cada caso.
+ a. Suponiendo dos números enteros dados, se pide imprimir:
+    i. si ambos son positivos y el primero es múltiplo de 5 y el segundo múltiplo de 7.
+    ii. si el primero es mayor a 3 veces el segundo o es múltiplo del segundo.
+
+    iii. si el primero es menor al segundo y la suma es par
+  public class Practica_1_Bonus_4 {
+     public static void main(String[] args){
+        int numero1=34, numero2=67; // valores de ejemplo
+        boolean resultado1, resultado2, resultado3;
+        resultado1=(numero1&&numero2 >0) && numero1/5==0 && numero2/7==0; //y cuando utiliza el and no pregunta nada sobre el numero 1 solo pregunta si el numero 2 es mayor al 0 esta mal por que tiene que preguntar por el resto si es igual a cero en la divisionde 5 y 7
+        resultado2=(numero2<3*numero1)||numero1%numero2==1; //esta mal el 3 multiplicando al numero 2 seria al 1 para saber si es multiplo se tiene que saber si es el resto da cero no 1
+        resultado3=numero1<numero2 && numero2+numero1%2==0; //este esta perfecto
+           System.out.println ("Inciso i: " + resultado1);
+           System.out.println ("Inciso ii: " + resultado2);
+            System.out.println ("Inciso iii: " + resultado3);
+        }
+  }
+b. Suponiendo un número entero dado, se pide imprimir:
+i. si el número está en un rango de 3 a 78, y si es múltiplo de 9 o de 7.
+
+ii. si el número es menor a 65 pero como mínimo 24 y es impar
+
+iii. si el número es negativo o positivo e impar
+ public class Practica_1_Bonus_5 {
+    public static void main(String[] args){
+       int numero=34; // valor de ejemplo
+       boolean resultado1, resultado2, resultado3;
+       resultado1=(3<numero<78) && (numero%9||%7)==0; // esta mal la formula del parentesis por que estas preguntando si 3 es menos a numero y si 78 es menor a numero aparte que esta mal declarado solo estas preguntando por si es multiplo de 7
+       resultado2=(numero<65 && numero>23)&& numero%2==0; // esta perfecto
+       resultado3=numero<0 && numero>0 || numero%2==0; // esta mal poner el and si queres preguntar si es una cosa o la otra tenes que poner un or lo otro esta perfecto
+         System.out.println ("Inciso i: " + resultado1);
+         System.out.println ("Inciso ii: " + resultado2);
+         System.out.println ("Inciso iii: " + resultado3);
+    }
+}
